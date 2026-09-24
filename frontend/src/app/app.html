@@ -1,0 +1,87 @@
+<h1>Student Entry</h1>
+
+<form>
+
+  <!-- Student Name -->
+  <label>Student Name</label>
+
+  <input
+    type="text"
+    placeholder="Enter student name"
+    [(ngModel)]="studentName"
+    name="studentName"
+  >
+
+  @if (submitted && studentName.trim() === '') {
+    <p class="error">Student name is required</p>
+  }
+
+  <br>
+
+  <!-- Class -->
+  <label>Class</label>
+
+  <input
+    type="text"
+    placeholder="Enter class"
+    [(ngModel)]="studentClass"
+    name="studentClass"
+  >
+
+  @if (submitted && studentClass.trim() === '') {
+    <p class="error">Class is required</p>
+  }
+
+  <br>
+
+  <!-- Subject -->
+  <label>Subject</label>
+
+  <input
+    type="text"
+    placeholder="Enter subject"
+    [(ngModel)]="subject"
+    name="subject"
+  >
+
+  @if (submitted && subject.trim() === '') {
+    <p class="error">Subject is required</p>
+  }
+
+  <br>
+
+  <button type="button" (click)="addStudent()">
+    Add Student
+  </button>
+
+</form>
+
+<h2>Student List</h2>
+
+<p>Number of students: {{ students.length }}</p>
+
+<table border="1">
+
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Class</th>
+      <th>Subject</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    @for (student of students; track $index) {
+
+      <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.student_class }}</td>
+        <td>{{ student.subject }}</td>
+      </tr>
+
+    }
+
+  </tbody>
+
+</table>

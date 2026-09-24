@@ -1,0 +1,64 @@
+/* Main page */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form */
+form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Input boxes */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+/* Add Student button */
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Student List heading */
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Student count */
+p {
+  text-align: center;
+}
+
+/* Student table */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+/* Table cells */
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
