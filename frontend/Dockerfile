@@ -23,5 +23,8 @@ FROM nginx:alpine
 # Copy the Angular production files to Nginx
 COPY --from=build /app/dist/student-entry/browser /usr/share/nginx/html
 
+# Copy custom Nginx configuration
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+
 # Nginx listens on port 80
 EXPOSE 80

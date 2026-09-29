@@ -1,0 +1,17 @@
+services:
+
+  frontend:
+    build: ./frontend
+    container_name: student-aws-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: student-aws-backend
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    expose:
+      - "8000"
